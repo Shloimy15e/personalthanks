@@ -31,8 +31,9 @@
   /* 3 */
   transform-style: preserve-3d;
 
-  background-image: url("/images/doorframe.jpg");
+  background-image: url("/images/nursery.jpg");
   background-size: cover;
+  background-position: right center;
 }
 
 .door {
