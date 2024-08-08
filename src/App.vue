@@ -6,7 +6,7 @@ import router from './router';
 <template>
   <div class="container">
     <router-view v-slot="{ Component }">
-      <transition  name="fade" mode="out-in">
+      <transition name="zoom-fade" mode="out-in">
         <component :is="Component" :key="$route.fullPath" />
       </transition>
     </router-view>
@@ -14,16 +14,28 @@ import router from './router';
 </template>
 
 <style lang="css">
-.fade-enter-active {
-  transition: opacity 1s;
+
+.zoom-fade-leave-active {
+  transition: opacity 3.5s ease, transform 3.5s ease;
 }
 
-.fade-leave-active {
-  transition: opacity 0.15s;
+.zoom-fade-enter-active {
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.fade-enter-from,
-.fade-leave-to {
+
+.zoom-fade-leave-to {
   opacity: 0;
+  transform: scale(1.65);
+}
+.zoom-fade-enter-from {
+  opacity: 0;
+  transform: scale(1);
+}
+
+.zoom-fade-enter-to,
+.zoom-fade-leave-from {
+  opacity: 1;
+  duration: 0.5s;
 }
 </style>

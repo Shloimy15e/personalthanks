@@ -1,22 +1,29 @@
 <template>
-  <div class="flex h-screen justify-center items-end overflow-visible bg-cyan-700 pb-4">
-    <div class="doorframe w-fit h-[90vh]" tabindex="0">
-      <div class="door h-full">
-        <img src="/images/door.jpg" alt="door" class="w-auto h-full" />
+  <div
+    class="flex h-screen justify-center items-end overflow-visible bg-cyan-700 pb-4"
+  >
+    <router-link to="/main" class="w-fit h-fit">
+      <div class="doorframe w-fit h-[90vh]" tabindex="0">
+        <div class="door h-full">
+          <img src="/images/door.jpg" alt="door" class="w-auto h-full" />
+        </div>
+        <div class="door2 h-full">
+          <img
+            src="/images/door.jpg"
+            alt="door"
+            class="w-auto h-full transform scale-x-[-1]"
+          />
+        </div>
       </div>
-      <div class="door2 h-full">
-        <img src="/images/door.jpg" alt="door" class="w-auto h-full transform scale-x-[-1]" />      
-      </div>
-    </div>
+      </router-link>
   </div>
 </template>
 
-<script setup>
-
-</script>
+<script setup></script>
 
 <style scoped>
-.doorframe, .doorframe2 {
+.doorframe,
+.doorframe2 {
   /* 1 */
   display: flex;
   /* 2 */
@@ -28,7 +35,7 @@
   background-size: cover;
 }
 
-.door{
+.door {
   /* 1 */
   flex-grow: 1;
   /* 3 */
@@ -43,7 +50,7 @@
   position: relative;
 }
 
-.door2{
+.door2 {
   /* 1 */
   flex-grow: 1;
   /* 3 */
@@ -58,7 +65,8 @@
   position: relative;
 }
 
-.door:before, .door2:before {
+.door:before,
+.door2:before {
   /* 6 */
   content: "";
   /* 6 */
@@ -79,12 +87,11 @@
   transform: rotateY(180deg);
 }
 
-.doorframe:hover .door,
 .doorframe:focus .door {
   /* 8 */
   transform: rotate3d(0, 1, 0, -130deg);
 }
-.doorframe:hover .door2,
+
 .doorframe:focus .door2 {
   /* 8 */
   transform: rotate3d(0, 1, 0, 130deg);
