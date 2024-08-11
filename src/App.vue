@@ -16,7 +16,7 @@ import router from './router';
 <style lang="css">
 
 .zoom-fade-leave-active {
-  transition: opacity 3.5s ease, transform 3.5s ease;
+  transition: opacity 3s ease, transform 3s ease;
 }
 
 .zoom-fade-enter-active {
@@ -36,6 +36,6 @@ import router from './router';
 .zoom-fade-enter-to,
 .zoom-fade-leave-from {
   opacity: 1;
-  duration: 0.5s;
+  transform: scale(1);
 }
 </style>

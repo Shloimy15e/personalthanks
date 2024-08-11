@@ -2,17 +2,20 @@
   <div
     class="flex h-screen justify-center items-end overflow-visible bg-cyan-700 pb-4"
   >
-    <router-link to="/main" class="w-fit h-fit">
+    <router-link to="/foyer" class="w-fit h-fit">
       <div class="doorframe w-fit h-[90vh]" tabindex="0">
-        <div class="door h-full">
+        <div class="door h-full z-10">
           <img src="/images/door.jpg" alt="door" class="w-auto h-full" />
         </div>
-        <div class="door2 h-full">
+        <div class="door2 h-full z-10">
           <img
             src="/images/door.jpg"
             alt="door"
             class="w-auto h-full transform scale-x-[-1]"
           />
+        </div>
+        <div class="absolute w-full h-full p-10 flex justify-center items-end">
+          <p class=" text-6xl text-gray-800 font-petitFormalScript p-3 bg-white bg-opacity-40 rounded-lg">Tap to Enter</p>
         </div>
       </div>
       </router-link>
@@ -31,9 +34,9 @@
   /* 3 */
   transform-style: preserve-3d;
 
-  background-image: url("/images/nursery.jpg");
+  background-image: url("/images/pink-foyer.jpg");
   background-size: cover;
-  background-position: right center;
+  background-position: center;
 }
 
 .door {
@@ -88,12 +91,12 @@
   transform: rotateY(180deg);
 }
 
-.doorframe:focus .door {
+.doorframe:hover .door {
   /* 8 */
   transform: rotate3d(0, 1, 0, -130deg);
 }
 
-.doorframe:focus .door2 {
+.doorframe:hover .door2 {
   /* 8 */
   transform: rotate3d(0, 1, 0, 130deg);
 }

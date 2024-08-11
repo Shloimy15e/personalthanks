@@ -2,6 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'LuxuriousScript';
+  src: url('/fonts/Luxurious_Script/LuxuriousScript-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'MarckScript';
+  src: url('/fonts/Marck_Script/MarckScript-Regular.ttf');
+  src: url();
+}
+
+@font-face {
+  font-family: 'PetitFormalScript';
+  src: url('/fonts/Petit_Formal_Script/PetitFormalScript-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'PinyonScript';
+  src: url('/public/fonts/Pinyon_Script/PinyonScript-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'CherrySwash';
+  src: url('/fonts/Cherry_Swash/CherrySwash-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'CherrySwash';
+  src: url('/fonts/Cherry_Swash/CherrySwash-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'ChopinScript';
+  src: url('/fonts/Chopin_Script/ChopinScript-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'SeptemberScript';
+  src: url('/fonts/September_Script/SeptemberScript-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
