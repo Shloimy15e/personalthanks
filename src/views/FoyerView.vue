@@ -1,5 +1,7 @@
 <template>
-    <FoyerMain />
+    <div>
+        <FoyerMain />
+    </div>
 </template>
 
 <script setup>

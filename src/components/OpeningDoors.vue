@@ -1,32 +1,43 @@
 <template>
   <div
-    class="flex h-screen justify-center items-end overflow-visible bg-cyan-700 pb-4"
+    class="relative w-screen max-h-screen aspect-video m-auto overflow-visible"
   >
-    <router-link to="/foyer" class="w-fit h-fit">
-      <div class="doorframe w-fit h-[90vh]" tabindex="0">
-        <div class="door h-full z-10">
-          <img src="/images/door.jpg" alt="door" class="w-auto h-full" />
-        </div>
+    <img
+      src="/images/house-front.jpg"
+      alt="house"
+      class="h-full w-full object-cover object-center"
+    />
+    <router-link
+      to="/foyer"
+      class="w-[16vw] h-[37.5vw] left-[50.80%] top-[53.5%] absolute transform -translate-x-1/2 -translate-y-1/2"
+    >
+      <div class="doorframe w-full h-full" tabindex="0">
         <div class="door2 h-full z-10">
           <img
-            src="/images/door.jpg"
+            src="/images/door2.jpg"
             alt="door"
-            class="w-auto h-full transform scale-x-[-1]"
+            class="w-auto h-full"
           />
         </div>
-        <div class="absolute w-full h-full p-10 flex justify-center items-end">
-          <p class=" text-6xl text-gray-800 font-petitFormalScript p-3 bg-white bg-opacity-40 rounded-lg">Tap to Enter</p>
-        </div>
       </div>
-      </router-link>
+    </router-link>
+  </div>
+  <div
+    class="absolute left-1/2 -translate-x-1/2 p-10 flex justify-center top-12"
+  >
+    <p
+      class="text-center text-6xl text-black font-petitFormalScript p-3 bg-white bg-opacity-40 rounded-lg"
+    >
+      Tap to Enter
+    </p>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+</script>
 
 <style scoped>
-.doorframe,
-.doorframe2 {
+.doorframe {
   /* 1 */
   display: flex;
   /* 2 */
@@ -37,6 +48,28 @@
   background-image: url("/images/pink-foyer.jpg");
   background-size: cover;
   background-position: center;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .doorframe .door {
+    animation: openLeftDoor 1.5s forwards;
+  }
+
+  .doorframe .door2 {
+    animation: openRightDoor 1.5s forwards;
+  }
+}
+
+@keyframes openLeftDoor {
+  to {
+    transform: rotate3d(0, 1, 0, -130deg);
+  }
+}
+
+@keyframes openRightDoor {
+  to {
+    transform: rotate3d(0, 1, 0, 130deg);
+  }
 }
 
 .door {
@@ -91,13 +124,15 @@
   transform: rotateY(180deg);
 }
 
-.doorframe:hover .door {
-  /* 8 */
-  transform: rotate3d(0, 1, 0, -130deg);
-}
+@media (hover: hover) and (pointer: fine) {
+  .doorframe:hover .door {
+    /* 8 */
+    transform: rotate3d(0, 1, 0, -130deg);
+  }
 
-.doorframe:hover .door2 {
-  /* 8 */
-  transform: rotate3d(0, 1, 0, 130deg);
+  .doorframe:hover .door2 {
+    /* 8 */
+    transform: rotate3d(0, 1, 0, 130deg);
+  }
 }
 </style>

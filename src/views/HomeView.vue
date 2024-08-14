@@ -1,5 +1,7 @@
 <template>
-  <OpeningDoors />
+  <div>
+    <OpeningDoors />
+  </div>  
 </template>
 
 <script setup>

@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "./views/HomeView.vue";
-import MainView from "./views/MainView.vue";
 import FoyerView from "./views/FoyerView.vue";
+import NurseryView from "./views/NurseryView.vue";
 
 const routes = [
   {
@@ -17,7 +17,7 @@ const routes = [
   {
     path: "/nursery",
     name: "nursery",
-    component: MainView,
+    component: NurseryView,
   },
 ];
 
